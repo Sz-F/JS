@@ -1,0 +1,17 @@
+function doItWhenReady() {
+    alert('Hello fffrom callback!'); 
+}
+
+function process(callback) {
+    if (typeof callback !== 'function') {
+         callback = false; 
+         alert("błąd")
+    }
+    
+    if (callback) {
+      	alert('a teraz callback')
+         callback();   
+    }  
+}
+
+process(doItWhenReady;
