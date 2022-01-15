@@ -1,0 +1,11 @@
+function diffArray(arr1, arr2) {
+  const diff=[];
+  const newArr = arr1.concat(arr2);
+  for(let i=0;i<newArr.length;i++){
+    if((arr1.indexOf(newArr[i])===-1)||(arr2.indexOf(newArr[i])===-1)){
+      diff.push(newArr[i]);
+    }
+  }
+  return diff;
+}
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
